@@ -16,8 +16,21 @@ along with Hinário Adventista - não oficial.  If not, see <https://www.gnu.org
 """
 
 import os
-import subprocess
+
+#CONSTANTES###############################################################
+LIMITE = 120
 
 class Reprodutor():
     def Tocar(musica):
-        os.system(f'start videos/{musica}.mp4')
+        try:
+            # Converte a string para inteiro
+            # Assim o teste não dá erro
+            musica = int(musica)
+            if musica < 1 or musica > LIMITE:
+                return False
+            os.system(f'start videos/{musica}.mp4')
+            return True
+        except ValueError:
+            # Se a conversão der errado...
+            return False
+        
