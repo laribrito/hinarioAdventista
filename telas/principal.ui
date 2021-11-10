@@ -85,17 +85,20 @@
      <string>Tocar</string>
     </property>
    </widget>
-   <widget class="QListView" name="resultados">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
+   <widget class="QLabel" name="setMensagem">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>200</y>
-      <width>451</width>
-      <height>131</height>
+      <x>0</x>
+      <y>290</y>
+      <width>671</width>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
   </widget>

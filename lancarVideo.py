@@ -28,7 +28,7 @@ class Reprodutor():
             musica = int(musica)
             if musica < 1 or musica > LIMITE:
                 return False
-            os.system(f'start videos/{musica}.mp4')
+            os.system(f'xdg-open videos/{musica}.mp4' or f'start videos/{musica}.mp4')
             return True
         except ValueError:
             # Se a conversão der errado...
